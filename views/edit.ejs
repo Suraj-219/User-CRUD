@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+     <style>
+        html, body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+        }
+        body {
+            background: linear-gradient(120deg, #232526 0%, #0f2027 50%, #2c5364 100%);
+            background-attachment: fixed;
+            color: #e6eef2; 
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .app-container {
+            min-height: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: normal;
+            justify-content: center;
+            padding: 32px;
+        }
+        .card {
+            background: rgba(255,255,255,0.04);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+            max-width: 880px;
+            width: 100%;
+            color: #e6eef2;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <div class="card">
+            <div class=" mb-6">
+                <a class="text-blue-400" href="/read">← Back to Users</a>
+            </div>
+
+            <h1 class="text-3xl tracking-tighter mb-4 text-green-400">Update User</h1>
+            <form action="/update/<% user._id %>" method="post" class="space-y-4">
+                <input class="w-full px-5 py-2 border-2 border-zinc-800 rounded-lg outline-none bg-transparent" type="text" name="name" placeholder="name" value="<% user.name %>">
+                <input class="w-full px-5 py-2 border-2 border-zinc-800 rounded-lg outline-none bg-transparent" type="text" name="email" placeholder="email" value="<% user.email %>">
+                <input class="w-full px-5 py-2 border-2 border-zinc-800 rounded-lg outline-none bg-transparent" type="text" name="image" placeholder="url" value="<% user.image %>">
+                <div class="flex justify-end">
+                    <input class="px-5 py-2 bg-yellow-500 text-black rounded-lg" type="submit" value="Update User">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

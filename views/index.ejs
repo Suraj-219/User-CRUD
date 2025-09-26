@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <style>
+        html, body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+        }
+        body {
+            background: linear-gradient(120deg, #232526 0%, #0f2027 50%, #2c5364 100%);
+            background-attachment: fixed;
+            color: #e6eef2; 
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .app-container {
+            min-height: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: normal;
+            justify-content: center;
+            padding: 32px;
+        }
+        .card {
+            background: rgba(255,255,255,0.04);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+            max-width: 880px;
+            width: 100%;
+            color: #e6eef2;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <div class="topbar">
+            <div class="brand">USER CRUD</div>
+            <nav class="nav">
+                <a href="/read" class="text-white inline-block">All Users</a>
+            </nav>
+        </div>
+
+        <section class="card">
+            <h1 style="font-size:1.5rem;margin-bottom:8px">Create User</h1>
+            <form action="/create" method="post">
+                <div class="form-row">
+                    <input type="text" name="name" placeholder="Name" aria-label="Name">
+                    <input type="email" name="email" placeholder="Email" aria-label="Email">
+                    <input type="text" name="image" placeholder="Image URL" aria-label="Image URL">
+                    <button class="btn" type="submit">Create User</button>
+                </div>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
