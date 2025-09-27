@@ -23,6 +23,10 @@ This project allows you to Create, Read, Update, and Delete users, with a clean 
 
 - Database: MongoDB + Mongoose
 
+- Frontend: EJS (templating engine), Tailwind CSS, custom CSS
+
+- Other: Express middleware (body parser, static files)
+
 ## 📂 Project Structure
 
 user-crud-express/
@@ -43,6 +47,4 @@ user-crud-express/
 └── README.md
 
 
-Frontend: EJS (templating engine), Tailwind CSS, custom CSS
 
-Other: Express middleware (body parser, static files)
